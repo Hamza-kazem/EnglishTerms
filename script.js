@@ -46,9 +46,6 @@ function renderGlossaryData(data) {
         </div>
       `;
 
-      termElement.addEventListener('click', () => {
-        termElement.classList.toggle('expanded');
-      });
 
       // إضافة المصطلح إلى الحاوية الرئيسية
       container.appendChild(termElement);

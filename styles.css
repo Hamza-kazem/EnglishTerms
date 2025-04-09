@@ -90,9 +90,6 @@ main {
   text-decoration: none;
 }
 
-.glossary-item.expanded .details {
-  display: block;
-}
 
 .glossary-item strong {
   font-weight: 600;
