@@ -2,21 +2,26 @@
 const apiUrl = "https://script.google.com/macros/s/AKfycbzX_76VX5pBCVLr_FDLwJyNI30r_515GWGPkCs5buN9Do4c2DlWWoJx80HqMdFssXVR/exec";
 
 // دالة لجلب البيانات وعرضها
+const loaderContainer = document.querySelector('.loading-container');
+const glossaryContainer = document.getElementById('glossary-container');
+
 async function fetchGlossaryData() {
+  loaderContainer.style.display = 'flex';
+  glossaryContainer.innerHTML = '';
+
   try {
     // جلب البيانات من الرابط
     const response = await fetch(apiUrl);
     const data = await response.json();
 
-
     // عرض المصطلحات
     renderGlossaryData(data);
 
-
   } catch (error) {
     console.error("Error fetching glossary data:", error);
-    const container = document.getElementById("glossary-container");
-    container.innerHTML = "<p>Failed to load terms. Please try again later.</p>";
+    glossaryContainer.innerHTML = "<p>Failed to load terms. Please try again later.</p>";
+  } finally {
+    loaderContainer.style.display = 'none';
   }
 }
 
@@ -46,6 +51,9 @@ function renderGlossaryData(data) {
         </div>
       `;
 
+      termElement.addEventListener('click', () => {
+        termElement.classList.toggle('expanded');
+      });
 
       // إضافة المصطلح إلى الحاوية الرئيسية
       container.appendChild(termElement);

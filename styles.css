@@ -90,6 +90,9 @@ main {
   text-decoration: none;
 }
 
+.glossary-item.expanded .details {
+  display: block;
+}
 
 .glossary-item strong {
   font-weight: 600;
@@ -107,4 +110,32 @@ footer {
 footer p {
   font-size: 0.9rem;
   color: #6c757d;
+}
+
+.loader.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #007bff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto; /* Center the spinner */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* May need additional CSS for the container to ensure centering */
+.loading-container {
+  position: absolute; /* or fixed as needed */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* to ensure it appears above other elements */
 }
