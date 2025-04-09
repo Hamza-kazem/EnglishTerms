@@ -1,0 +1,113 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #2d3e50;
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+main {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+#glossary-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.glossary-item {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #eee;
+}
+
+.glossary-item:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.1);
+}
+
+.glossary-item .term-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.glossary-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.1rem;
+  color: #343a40;
+  transition: color 0.3s ease;
+}
+
+.glossary-item:hover h3 {
+  color: #007bff;
+}
+
+.glossary-item .translation {
+  font-family: 'Tajawal', sans-serif;
+  font-style: normal;
+  color: #777;
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+.glossary-item .details {
+  display: none;
+  margin-top: 0.75rem;
+  border-top: 1px solid #ddd;
+  padding-top: 0.75rem;
+}
+
+.glossary-item .details a {
+  text-decoration: none;
+}
+
+.glossary-item.expanded .details {
+  display: block;
+}
+
+.glossary-item strong {
+  font-weight: 600;
+  color: #007bff;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #e9ecef;
+  margin-top: 3rem;
+  border-top: 1px solid #ddd;
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
