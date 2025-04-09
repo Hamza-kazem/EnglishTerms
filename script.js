@@ -40,7 +40,7 @@ function renderGlossaryData(data) {
       // إضافة محتوى المصطلح
       termElement.innerHTML = `
         <div class="term-row">
-          <h3>${item["#"]}. ${item["Term(en)"]}</h3>
+          <h3>${item["Term(en)"]}</h3>
           <p class="translation">${item["Term(ar)"]}</p>
         </div>
         <div class="details">

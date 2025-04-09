@@ -9,12 +9,26 @@ body {
 }
 
 header {
-  background-color: #2d3e50;
+  background: linear-gradient(45deg, #2d3e50, #34495e, #2c3e50);
+  background-size: 200% 200%;
   color: white;
   text-align: center;
   padding: 2rem 0;
   margin-bottom: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
